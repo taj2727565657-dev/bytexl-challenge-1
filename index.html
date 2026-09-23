@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FitLife Bento Grid</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial;
+  background:#101510;
+  color:white;
+  padding:30px;
+}
+h1{color:#c8f56a;margin-bottom:5px}
+header{margin-bottom:20px}
+.grid{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+.card{
+  background:#1d251d;
+  padding:20px;
+  border-radius:18px;
+  min-height:150px;
+}
+.card h2{margin-bottom:15px}
+.card h3{color:#c8f56a;font-size:30px}
+.card p{color:#999;margin-top:8px}
+.big{grid-column:span 2;grid-row:span 2}
+.wide{grid-column:span 2}
+button{
+  margin-top:20px;
+  padding:10px 20px;
+  border:0;
+  border-radius:10px;
+  background:#c8f56a;
+  cursor:pointer;
+}
+.bar{
+  display:inline-block;
+  width:20px;
+  margin:20px 5px 0;
+  background:#c8f56a;
+  border-radius:5px;
+}
+.b1{height:40px}.b2{height:70px}.b3{height:90px}.b4{height:55px}
+@media(max-width:700px){
+  .grid{grid-template-columns:1fr 1fr}
+  .big,.wide{grid-column:span 2}
+}
+@media(max-width:450px){
+  body{padding:15px}
+  .grid{grid-template-columns:1fr}
+  .big,.wide{grid-column:span 1}
+}
+</style>
+</head>
+<body>
+<div class="grid">
+<header><h1>FitLife</h1><p>My Fitness Dashboard</p></header>
+
+<div class="card big">
+<h2>👟 Steps</h2><h3>8,426</h3>
+<p>Steps completed today</p>
+<button>View Progress</button>
+</div>
+
+<div class="card">
+<h2>💧 Water</h2><h3>2.1L</h3><p>Goal: 3L</p>
+</div>
+
+<div class="card">
+<h2>🔥 Calories</h2><h3>1,842</h3><p>Calories burned</p>
+</div>
+
+<div class="card">
+<h2>😴 Sleep</h2><h3>8h 12m</h3><p>Good sleep</p>
+</div>
+
+<div class="card">
+<h2>💪 Workout</h2><h3>45 min</h3><p>Upper Body</p>
+</div>
+
+<div class="card wide">
+<h2>📊 Weekly Activity</h2>
+<span class="bar b1"></span><span class="bar b2"></span>
+<span class="bar b3"></span><span class="bar b4"></span>
+</div>
+
+</div>
+</body>
+</html>
